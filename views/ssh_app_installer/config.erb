@@ -1,0 +1,34 @@
+<% f = taglib("/lib/form") %>
+<% f.entry(:title => "Node Name") do %>
+	<% f.textbox(:name => "nodename", :field => "${server.nodeName}") %>
+<% end %>
+<% f.entry(:title => "Hostname") do %>
+	<% f.textbox(:name => "hostname", :value => "${server.hostname}") %>
+<% end %>
+<% f.entry(:title => "Port") do %>
+	<% f.textbox(:name => "port", :value => "${server.port}") %>
+<% end %>
+<% f.entry(:title => "Username") do %>
+	<% f.textbox(:name => "username", :value => "${server.username}") %>
+<% end %>
+<% f.entry(:title => "Passphrase") do %>
+	<% f.textbox(:class => "setting-input", :type => "password", :name => "passphrase", :value => "${server.passphrase}") %>
+<% end %>
+<% f.entry(:title => "Keyfile") do %>
+	<% f.textbox(:name => "keyfile", :value => "${server.keyfile}") %>
+<% end %>
+<% f.entry(:title => "Installer Root Directory") do %>
+	<% f.textbox(:name => "installDir", :value => "${server.installDir}") %>
+<% end %>
+<% f.entry(:title => "Pre-Install SSH Script") do %>
+	<% f.textarea(:name => "preInstallSshCommand", :value => "${server.preInstallSshCommand}") %>
+<% end %>
+<% f.entry(:title => "Post-Install SSH Script") do %>
+	<% f.textarea(:name => "postInstallSshCommand", :value => "${server.postInstallSshCommand}") %>
+<% end %>
+<% f.entry(:title => "Java Home") do %>
+	<% f.textbox(:name => "javahome", :value => "${server.javahome}") %>
+<% end %>
+<% f.entry(:title => "Maven Executable") do %>
+	<% f.textbox(:name => "mvnExec", :value => "${server.mvnExec}") %>
+<% end %>
